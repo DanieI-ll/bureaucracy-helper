@@ -1,14 +1,15 @@
+// Event listener for window load to apply fade-in effect to elements
 window.addEventListener('load', () => {
   const elements = document.querySelectorAll('.fade-in');
   elements.forEach((el, index) => {
     setTimeout(() => {
       el.style.opacity = 1;
       el.style.transform = 'translateY(0)';
-    }, index * 500); // Задержка 0.5с между элементами
+    }, index * 500); // Delay of 0.5s between elements
   });
 });
 
-// Скрипт для открытия/закрытия меню выбора языка
+// Script for opening/closing the language selection menu
 const languageButton = document.getElementById('language-button');
 const languageDropdown = document.getElementById('language-dropdown');
 const languageSwitcher = document.querySelector('.language-switcher');
@@ -17,7 +18,7 @@ languageButton.addEventListener('click', () => {
   languageSwitcher.classList.toggle('active');
 });
 
-// Логика для изменения языка при выборе
+// Logic for changing language when a language is selected
 const languageLinks = document.querySelectorAll('.language-dropdown a');
 
 languageLinks.forEach((link) => {
@@ -25,18 +26,18 @@ languageLinks.forEach((link) => {
     e.preventDefault();
     const selectedLanguage = e.target.closest('a').dataset.lang;
 
-    // Пример: загрузка текста на выбранном языке
+    // Example: load text in the selected language
     changeLanguage(selectedLanguage);
 
-    // Обновление кнопки с флагом
+    // Update the button with the flag
     languageButton.innerHTML = e.target.closest('a').innerHTML;
 
-    // Закрыть меню после выбора
+    // Close the menu after selection
     languageSwitcher.classList.remove('active');
   });
 });
 
-// Тексты для языков
+// Texts for different languages
 const texts = {
   ru: {
     headerTitle: 'Автоматизация бюрократии в Германии',
@@ -125,7 +126,7 @@ const texts = {
   },
 };
 
-// Функция смены языка
+// Function to change the language
 function changeLanguage(language) {
   document.querySelector('header h1').textContent = texts[language].headerTitle;
   document.querySelector('header p').textContent = texts[language].headerSubtitle;
@@ -148,5 +149,5 @@ function changeLanguage(language) {
   document.querySelector('footer p').textContent = texts[language].footerText;
 }
 
-// Устанавливаем язык по умолчанию
+// Set default language
 changeLanguage('en');

@@ -1,35 +1,40 @@
+/* Reset default margin, padding, and set box-sizing to border-box for all elements */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Set default font, background color, and text color for the body */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f1f1f1;
   color: #333;
 }
 
+/* Container class for centralizing content */
 .container {
   width: 85%;
   margin: 0 auto;
 }
 
+/* Fade-in animation for elements */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* Header */
+/* Header styling */
 header {
-  background: linear-gradient(45deg, #000000, #d50032); /* black to red */
+  background: linear-gradient(45deg, #000000, #d50032); /* black to red gradient */
   color: white;
   padding: 80px 0;
   text-align: center;
-  border-bottom: 2px solid #FFD700;
+  border-bottom: 2px solid #FFD700; /* gold border */
 }
 
+/* Header title styling */
 header h1 {
   font-size: 4rem;
   margin-bottom: 20px;
@@ -37,11 +42,13 @@ header h1 {
   text-transform: uppercase;
 }
 
+/* Header paragraph styling */
 header p {
   font-size: 1.4rem;
   margin-bottom: 30px;
 }
 
+/* Header button styling */
 header button {
   padding: 12px 25px;
   background-color: #FFD700; /* gold */
@@ -53,23 +60,27 @@ header button {
   transition: all 0.3s ease-in-out;
 }
 
+/* Header button hover effect */
 header button:hover {
   background-color: #ffb800;
   transform: scale(1.05);
 }
 
+/* Features section styling */
 .features {
   background-color: #fff;
   padding: 60px 0;
   text-align: center;
 }
 
+/* Features section title styling */
 .features h2 {
   font-size: 2.5rem;
   margin-bottom: 40px;
   color: #333;
 }
 
+/* Individual feature box styling */
 .feature {
   display: inline-block;
   margin: 20px;
@@ -81,42 +92,49 @@ header button:hover {
   transition: all 0.3s ease-in-out;
 }
 
+/* Feature box hover effect */
 .feature:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* How it works section styling */
 .how-it-works {
   background-color: #f9f9f9;
   padding: 60px 0;
   text-align: center;
 }
 
+/* How it works section title styling */
 .how-it-works h2 {
   font-size: 2.5rem;
   margin-bottom: 40px;
 }
 
+/* Ordered list styling in how it works section */
 .how-it-works ol {
   text-align: left;
   max-width: 600px;
   margin: 0 auto;
 }
 
+/* List item styling in how it works section */
 .how-it-works ol li {
   font-size: 1.2rem;
   margin-bottom: 15px;
   color: #555;
 }
 
+/* Call to action section styling */
 .cta {
   background-color: #000;  /* black */
   color: white;
   padding: 60px 0;
   text-align: center;
-  border-top: 2px solid #FFD700;
+  border-top: 2px solid #FFD700; /* gold border */
 }
 
+/* Input field styling in call to action section */
 .cta input {
   padding: 12px;
   width: 320px;
@@ -127,6 +145,7 @@ header button:hover {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Button styling in call to action section */
 .cta button {
   padding: 12px 25px;
   background-color: #FFD700; /* gold */
@@ -138,24 +157,27 @@ header button:hover {
   transition: all 0.3s ease-in-out;
 }
 
+/* Button hover effect in call to action section */
 .cta button:hover {
   background-color: #ffb800;
   transform: scale(1.05);
 }
 
+/* Call to action header styling */
 .cta-header {
   margin-bottom: 30px;
 }
 
+/* Footer styling */
 footer {
   background-color: #333;
   color: white;
   text-align: center;
   padding: 30px 0;
-  border-top: 2px solid #FFD700;
+  border-top: 2px solid #FFD700; /* gold border */
 }
 
-/* Языковое меню */
+/* Language switcher menu styling */
 .language-switcher {
   position: absolute;
   top: 20px;
@@ -163,6 +185,7 @@ footer {
   z-index: 1000;
 }
 
+/* Language button styling */
 .language-button {
   background-color: #e6e6e5;
   border: none;
@@ -174,6 +197,7 @@ footer {
   justify-content: center;
 }
 
+/* Language dropdown menu styling */
 .language-dropdown {
   display: none;
   position: absolute;
@@ -186,6 +210,7 @@ footer {
   /* width: 90px; */
 }
 
+/* Language dropdown link styling */
 .language-dropdown a {
   display: flex;
   align-items: center;
@@ -196,15 +221,18 @@ footer {
   transition: background-color 0.3s ease;
 }
 
+/* Language dropdown link hover effect */
 .language-dropdown a:hover {
   background-color: #f1f1f1;
 }
 
+/* Flag icon styling */
 .flag-icon {
   width: 50px;
   height: 50px;
 }
 
+/* Show language dropdown when active */
 .language-switcher.active .language-dropdown {
   display: block;
 }
